@@ -1,0 +1,14 @@
+{
+ "dense": {
+  "parameters": 1707274,
+  "best_epoch": 10,
+  "val_acc": 0.537,
+  "test_acc": 0.5263
+ },
+ "cnn": {
+  "parameters": 62958,
+  "best_epoch": 12,
+  "val_acc": 0.6642,
+  "test_acc": 0.6595
+ }
+}
