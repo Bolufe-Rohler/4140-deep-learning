@@ -15,6 +15,13 @@ dist/
 # Datasets that torchvision and friends download on first run
 **/data/FashionMNIST/
 **/data/MNIST/
+**/data/cifar-10-batches-py/
+**/data/cifar-10-python.tar.gz
+
+# Figures the notebooks write when they run (regenerated every time)
+lectures/*/figures/
+lectures/*/figs/
+lectures/L07_cnns-2/runs/*.png
 
 # OS clutter
 .DS_Store
