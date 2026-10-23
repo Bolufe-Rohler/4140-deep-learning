@@ -5,12 +5,18 @@
 
 Sorting rules (override with --asset / --exclude / --keep, glob patterns on the
 package's relative paths, e.g. --exclude "figures/**"):
-  excluded   instructor-only or junk: deck_source/, figures/, make_figures*.py,
-             __pycache__, .ipynb_checkpoints, __MACOSX, .DS_Store
+  excluded   instructor-only or junk: deck_source/, figures/, figs/, make_figures*.py,
+             __pycache__, .ipynb_checkpoints, __MACOSX, .DS_Store (the notebooks
+             recreate their figure folders when they run)
   asset      weights and arrays (.pt .pth .npz .npy .pkl ...), any non-notebook
              file over 1 MiB, and every file in a folder holding over 200 files
-             (photo datasets); small text files (README, CREDITS, LICENSE) stay in git
+             (photo datasets); small text files (README, CREDITS, LICENSE) stay in git.
+             If a lecture's assets add up to under 5 MiB they simply stay in git:
+             no download step is needed for a handful of small weight files.
   git        everything else: notebooks, small JSON/CSV, scripts, READMEs
+
+One package can feed two lectures: run it twice with --exclude for the other
+lecture's notebook and files. --readme FILE replaces the package README.
 
 Assets go to dist/<folder>_assets.zip and their paths into .gitignore. Each
 notebook gets a banner (Open in Colab badge) and the setup cell at the top.
@@ -29,7 +35,7 @@ import nbformat
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import course  # noqa: E402
 
-EXCLUDE = ["deck_source/**", "figures/**", "make_figures*.py", "**/__pycache__/**",
+EXCLUDE = ["deck_source/**", "figures/**", "figs/**", "make_figures*.py", "**/__pycache__/**",
            "**/.ipynb_checkpoints/**", "__MACOSX/**", "**/.DS_Store", ".DS_Store",
            "**/.assets_ok", "*.pptx"]
 ASSET_EXT = {".pt", ".pth", ".ckpt", ".safetensors", ".npz", ".npy", ".pkl", ".pickle",
@@ -38,6 +44,7 @@ TEXT_KEEP = {".md", ".txt", ".cff"}
 SMALL_TEXT = {".csv", ".tsv", ".json", ".yaml", ".yml", ".py", ".md", ".txt"}
 BIG = 1 << 20          # 1 MiB
 CROWDED = 200          # files in one folder
+SMALL_LECTURE = 5 << 20  # assets below this total stay in git
 
 
 def match(path, patterns):
@@ -156,6 +163,7 @@ def main():
     ap.add_argument("--exclude", action="append", default=[])
     ap.add_argument("--keep", action="append", default=[])
     ap.add_argument("--replace", action="store_true", help="clear the lecture folder first")
+    ap.add_argument("--readme", help="file to use as the lecture README instead of the package's")
     a = ap.parse_args()
 
     m = course.load()
@@ -164,6 +172,10 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         src = unpack(a.package, tmp)
         plan = classify(src, a.asset, a.exclude, a.keep)
+        asset_total = sum((src / f).stat().st_size for f, k in plan.items() if k == "asset")
+        if 0 < asset_total < SMALL_LECTURE and not a.asset:
+            print(f"Assets total {asset_total / 2**20:.2f} MiB (< 5 MiB): keeping them in git.")
+            plan = {f: ("git" if k == "asset" else k) for f, k in plan.items()}
         size = {k: sum((src / f).stat().st_size for f, kk in plan.items() if kk == k) for k in ("git", "asset", "excluded")}
         n = {k: sum(1 for kk in plan.values() if kk == k) for k in size}
         print(f"{folder}  (package root: {src.name})")
@@ -195,6 +207,9 @@ def main():
             if k == "git":
                 (dest / f).parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(src / f, dest / f)
+
+        if a.readme:
+            shutil.copyfile(a.readme, dest / "README.md")
 
         assets = [f for f, k in plan.items() if k == "asset"]
         lec["assets"] = None

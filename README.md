@@ -35,7 +35,9 @@ notebook says how long that takes.
 
 | | Lecture | Notebook | |
 |---|---|---|---|
-| | *Notebooks appear here as lectures are added.* | | |
+| L04 | Why go deep? | [L04_why_go_deep.ipynb](lectures/L04_why-go-deep/L04_why_go_deep.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OWNER/4140-deep-learning/blob/main/lectures/L04_why-go-deep/L04_why_go_deep.ipynb) |
+| L15 | Sequences I: order and recurrent state | [L15_sequences_recurrent_state.ipynb](lectures/L15_sequences-1/L15_sequences_recurrent_state.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OWNER/4140-deep-learning/blob/main/lectures/L15_sequences-1/L15_sequences_recurrent_state.ipynb) |
+| L16 | Sequences II: memory and learning over time | [L16_memory_lstm.ipynb](lectures/L16_sequences-2/L16_memory_lstm.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/OWNER/4140-deep-learning/blob/main/lectures/L16_sequences-2/L16_memory_lstm.ipynb) |
 
 Lecture numbers follow the order of topics (tests and storm days are not numbered), so
 they match the Moodle sections even if a class moves.
