@@ -17,8 +17,8 @@ reconnect, so run that cell again after a reconnect. Your changes are lost unles
 **On your own computer.**
 
 ```bash
-git clone https://github.com/OWNER/cs4140-deep-learning.git
-cd cs4140-deep-learning
+git clone https://github.com/OWNER/4140-deep-learning.git
+cd 4140-deep-learning
 pip install -r requirements.txt
 jupyter lab
 ```
@@ -44,5 +44,5 @@ they match the Moodle sections even if a class moves.
 
 Each lecture folder lists the datasets it uses and their licences in its README or
 `CREDITS.md`. Trained weights, saved runs and datasets are not stored in git; they are
-attached to the [winter-2027-assets](https://github.com/OWNER/cs4140-deep-learning/releases/tag/winter-2027-assets) release and downloaded by the
+attached to the [winter-2027-assets](https://github.com/OWNER/4140-deep-learning/releases/tag/winter-2027-assets) release and downloaded by the
 first cell of each notebook.

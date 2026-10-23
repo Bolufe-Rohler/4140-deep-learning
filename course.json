@@ -3,11 +3,7 @@
   "institution": "University of Prince Edward Island",
   "term": "Winter 2027",
   "instructor": "Antonio Bolufé-Röhler",
-  "github": {
-    "owner": "OWNER",
-    "repo": "cs4140-deep-learning",
-    "branch": "main"
-  },
+  "github": {"owner": "OWNER", "repo": "4140-deep-learning", "branch": "main"},
   "assets_release": "winter-2027-assets",
   "lectures": [
     {"id": "L01", "slug": "course-launch", "title": "Course launch: what machines learn", "notebooks": [], "assets": null},
@@ -33,7 +29,6 @@
     {"id": "L21", "slug": "pretrained-language-models", "title": "Pretrained language models and adaptation", "notebooks": [], "assets": null},
     {"id": "L22", "slug": "generative-1", "title": "Generative models I: reconstruction and latent space", "notebooks": [], "assets": null},
     {"id": "L23", "slug": "generative-2", "title": "Generative models II: diffusion", "notebooks": [], "assets": null},
-    {"id": "L24", "slug": "reinforcement-learning", "title": "Reinforcement learning: learning through interaction", "notebooks": [], "assets": null},
-    {"id": "L25", "slug": "adaptive-optimization", "title": "Adaptive optimization", "notebooks": [], "assets": null}
+    {"id": "L24", "slug": "reinforcement-learning", "title": "Reinforcement learning: learning through interaction", "notebooks": [], "assets": null}
   ]
 }
