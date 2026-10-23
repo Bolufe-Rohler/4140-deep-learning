@@ -18,8 +18,7 @@ with one click, or on your own computer.
 or the link on Moodle. Run the first code cell before anything else: it fetches the course
 code and the lecture's saved results and data. Colab starts from scratch every time you
 reconnect, so run that cell again after a reconnect. Your changes are lost unless you use
-*File → Save a copy in Drive*. For the longer training runs, *Runtime → Change runtime type
-→ GPU* helps when Colab offers one.
+*File → Save a copy in Drive*.
 
 **On your own computer.**
 
@@ -33,10 +32,9 @@ jupyter lab
 Open a notebook inside `lectures/` and run its first cell, which downloads that lecture's
 saved results and data the first time.
 
-**Class mode and full mode.** Most notebooks start in *class mode*: they load saved results
-and trained weights so they run in seconds, as in the lecture. Switching to full mode
-(the flag is near the top of each notebook) retrains everything from scratch; each
-notebook says how long that takes.
+**Saved results or live training.** Flags at the top of each notebook choose between loading
+saved results and trained weights (seconds) and retraining from scratch (minutes, sometimes
+much longer). Each lecture's README lists its flags and how long each option takes.
 
 ## Lectures
 
