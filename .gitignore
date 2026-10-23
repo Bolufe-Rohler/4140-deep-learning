@@ -1,0 +1,23 @@
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Built asset zips (published to the GitHub release, never committed)
+dist/
+
+# Downloaded assets cache and markers
+.cache/
+**/.assets_ok
+
+# Datasets that torchvision and friends download on first run
+**/data/FashionMNIST/
+**/data/MNIST/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Each lecture's asset paths are added below by tools/add_lecture.py

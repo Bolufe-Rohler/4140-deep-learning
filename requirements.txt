@@ -1,0 +1,8 @@
+# For running the notebooks on your own computer. Google Colab already has all of these.
+torch
+torchvision
+numpy
+pandas
+matplotlib
+scikit-learn
+jupyterlab

@@ -1,0 +1,39 @@
+{
+  "course": "CS 4140 – Deep Learning",
+  "institution": "University of Prince Edward Island",
+  "term": "Winter 2027",
+  "instructor": "Antonio Bolufé-Röhler",
+  "github": {
+    "owner": "OWNER",
+    "repo": "cs4140-deep-learning",
+    "branch": "main"
+  },
+  "assets_release": "winter-2027-assets",
+  "lectures": [
+    {"id": "L01", "slug": "course-launch", "title": "Course launch: what machines learn", "notebooks": [], "assets": null},
+    {"id": "L02", "slug": "first-neural-network", "title": "From familiar ML to a first neural network", "notebooks": [], "assets": null},
+    {"id": "L03", "slug": "function-approximators", "title": "Networks as function approximators", "notebooks": [], "assets": null},
+    {"id": "L04", "slug": "why-go-deep", "title": "Why go deep?", "notebooks": [], "assets": null},
+    {"id": "L05", "slug": "pytorch", "title": "PyTorch in four ideas", "notebooks": [], "assets": null},
+    {"id": "L06", "slug": "cnns-1", "title": "CNNs I: local structure and shared filters", "notebooks": [], "assets": null},
+    {"id": "L07", "slug": "cnns-2", "title": "CNNs II: a complete classification workflow", "notebooks": [], "assets": null},
+    {"id": "L08", "slug": "optimization", "title": "Optimization for deep networks", "notebooks": [], "assets": null},
+    {"id": "L09", "slug": "generalization", "title": "Generalization and regularization", "notebooks": [], "assets": null},
+    {"id": "L10", "slug": "deeper-networks", "title": "Training deeper networks", "notebooks": [], "assets": null},
+    {"id": "L11", "slug": "debugging", "title": "Debugging models and checking experiments", "notebooks": [], "assets": null},
+    {"id": "L12", "slug": "shortcut-learning", "title": "Shortcut learning and trustworthy evaluation", "notebooks": [], "assets": null},
+    {"id": "L13", "slug": "representations", "title": "Representations and image embeddings", "notebooks": [], "assets": null},
+    {"id": "L14", "slug": "transfer-learning", "title": "Transfer learning and fine-tuning", "notebooks": [], "assets": null},
+    {"id": "L15", "slug": "sequences-1", "title": "Sequences I: order and recurrent state", "notebooks": [], "assets": null},
+    {"id": "L16", "slug": "sequences-2", "title": "Sequences II: memory and learning over time", "notebooks": [], "assets": null},
+    {"id": "L17", "slug": "language-1", "title": "Language I: tokens, embeddings and text models", "notebooks": [], "assets": null},
+    {"id": "L18", "slug": "language-2", "title": "Language II: next-token prediction and generation", "notebooks": [], "assets": null},
+    {"id": "L19", "slug": "attention", "title": "Attention: selecting relevant context", "notebooks": [], "assets": null},
+    {"id": "L20", "slug": "transformers", "title": "Transformers: assembling the architecture", "notebooks": [], "assets": null},
+    {"id": "L21", "slug": "pretrained-language-models", "title": "Pretrained language models and adaptation", "notebooks": [], "assets": null},
+    {"id": "L22", "slug": "generative-1", "title": "Generative models I: reconstruction and latent space", "notebooks": [], "assets": null},
+    {"id": "L23", "slug": "generative-2", "title": "Generative models II: diffusion", "notebooks": [], "assets": null},
+    {"id": "L24", "slug": "reinforcement-learning", "title": "Reinforcement learning: learning through interaction", "notebooks": [], "assets": null},
+    {"id": "L25", "slug": "adaptive-optimization", "title": "Adaptive optimization", "notebooks": [], "assets": null}
+  ]
+}
