@@ -50,6 +50,13 @@ def run(nb_path, cwd, env, timeout, repo_override=None):
                 os.environ[k] = v
 
 
+def report(r):
+    lid, nb, mode, ok, dt, err = r
+    print(f"{'PASS' if ok else 'FAIL'}  {lid}  {nb}  [{mode}]  {dt:.0f}s", flush=True)
+    if err:
+        print(f"      {err}", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--lecture")
@@ -78,14 +85,12 @@ def main():
                     sim.mkdir()
                     ok, dt, err = run(src, sim, env, a.timeout, repo_override=str(clone))
                     results.append((lec["id"], nb, "colab", ok, dt, err))
+                    report(results[-1])
                 if a.mode in ("repo", "both"):
                     ok, dt, err = run(src, src.parent, env, a.timeout)
                     results.append((lec["id"], nb, "repo", ok, dt, err))
-    print()
-    for lid, nb, mode, ok, dt, err in results:
-        print(f"{'PASS' if ok else 'FAIL'}  {lid}  {nb}  [{mode}]  {dt:.0f}s")
-        if err:
-            print(f"      {err}")
+                    report(results[-1])
+    print(f"\n{sum(r[3] for r in results)} of {len(results)} runs passed")
     sys.exit(0 if all(r[3] for r in results) else 1)
 
 
