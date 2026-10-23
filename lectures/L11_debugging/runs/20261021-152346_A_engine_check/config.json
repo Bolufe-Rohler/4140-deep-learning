@@ -1,0 +1,40 @@
+{
+  "name": "A_engine_check",
+  "purpose": "engine == Part A?",
+  "config": {
+    "bugs": {
+      "crop": true,
+      "eval_norm": "half",
+      "softmax": true
+    },
+    "seed": 0,
+    "head": "small",
+    "optimizer_built": "last",
+    "epochs": 8,
+    "batch": 64,
+    "lr": 0.001,
+    "optimizer": "Adam",
+    "n_train": 20000,
+    "sort_by_class": false,
+    "shuffle": true,
+    "scheduler": null,
+    "scheduler_every": "epoch"
+  },
+  "seed": 0,
+  "code_version": "L12-bughunt-v1",
+  "commit": "not under git (demo)",
+  "data": {
+    "dataset": "Fashion-MNIST",
+    "split_seed": 1234,
+    "n_train": 20000,
+    "n_val": 5000
+  },
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "device": "cpu",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+  },
+  "started": "2026-10-21 15:23:46"
+}

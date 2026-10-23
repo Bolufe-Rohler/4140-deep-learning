@@ -1,0 +1,26 @@
+{
+  "name": "FG_flat",
+  "purpose": "field guide: nothing updates",
+  "config": {
+    "seed": 0,
+    "note": "model re-created after the optimizer",
+    "n_train": 10000
+  },
+  "seed": 0,
+  "code_version": "L12-bughunt-v1",
+  "commit": "not under git (demo)",
+  "data": {
+    "dataset": "Fashion-MNIST",
+    "split_seed": 1234,
+    "n_train": 10000,
+    "n_val": 5000
+  },
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "device": "cpu",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+  },
+  "started": "2026-10-21 15:39:00"
+}

@@ -21,3 +21,15 @@ dist/
 Thumbs.db
 
 # Each lecture's asset paths are added below by tools/add_lecture.py
+
+# >>> assets: L09_generalization
+lectures/L09_generalization/models/
+# <<< assets: L09_generalization
+
+# >>> assets: L14_transfer-learning
+lectures/L14_transfer-learning/data/field/
+lectures/L14_transfer-learning/data/lab/
+lectures/L14_transfer-learning/results/finetune_25leaves.pt
+lectures/L14_transfer-learning/results/resnet18_features_160.pt
+lectures/L14_transfer-learning/results/scratch_25leaves.pt
+# <<< assets: L14_transfer-learning

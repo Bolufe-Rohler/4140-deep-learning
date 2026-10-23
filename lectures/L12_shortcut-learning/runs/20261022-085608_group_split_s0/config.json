@@ -1,0 +1,19 @@
+{
+  "name": "group_split",
+  "purpose": "split by original photo",
+  "seed": 0,
+  "epochs": 20,
+  "batch": 64,
+  "lr": 0.001,
+  "optimizer": "Adam",
+  "n_train": 8000,
+  "n_val": 2000,
+  "preprocessing": null,
+  "code_version": "L13-shortcuts-v1",
+  "commit": "not under git (demo)",
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cpu",
+    "device": "cpu"
+  }
+}

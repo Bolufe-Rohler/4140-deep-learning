@@ -1,0 +1,231 @@
+{
+ "size_runs": {
+  "frozen|1|0": {
+   "lab": 0.6794871687889099,
+   "field": 0.6153846383094788,
+   "field_said_healthy": 0.0714285746216774,
+   "seconds": 0.09076452255249023
+  },
+  "frozen|1|1": {
+   "lab": 0.7435897588729858,
+   "field": 0.5714285969734192,
+   "field_said_healthy": 0.049450550228357315,
+   "seconds": 0.10001087188720703
+  },
+  "frozen|1|2": {
+   "lab": 0.8269230723381042,
+   "field": 0.48351648449897766,
+   "field_said_healthy": 0.47252747416496277,
+   "seconds": 0.08500027656555176
+  },
+  "frozen|5|0": {
+   "lab": 0.8846153616905212,
+   "field": 0.598901093006134,
+   "field_said_healthy": 0.17582418024539948,
+   "seconds": 0.17905259132385254
+  },
+  "frozen|5|1": {
+   "lab": 0.8589743375778198,
+   "field": 0.5439560413360596,
+   "field_said_healthy": 0.010989011265337467,
+   "seconds": 0.15818023681640625
+  },
+  "frozen|5|2": {
+   "lab": 0.8910256624221802,
+   "field": 0.6208791136741638,
+   "field_said_healthy": 0.02747252769768238,
+   "seconds": 0.09801268577575684
+  },
+  "frozen|25|0": {
+   "lab": 0.9615384340286255,
+   "field": 0.5274725556373596,
+   "field_said_healthy": 0.09340659528970718,
+   "seconds": 0.12871527671813965
+  },
+  "frozen|25|1": {
+   "lab": 0.9487179517745972,
+   "field": 0.593406617641449,
+   "field_said_healthy": 0.049450550228357315,
+   "seconds": 0.13166284561157227
+  },
+  "frozen|25|2": {
+   "lab": 0.9615384340286255,
+   "field": 0.5329670310020447,
+   "field_said_healthy": 0.3241758346557617,
+   "seconds": 0.13028359413146973
+  },
+  "finetune|1|0": {
+   "lab": 0.8012820482254028,
+   "field": 0.5494505763053894,
+   "field_said_healthy": 0.005494505632668734,
+   "seconds": 42.34705424308777
+  },
+  "finetune|1|1": {
+   "lab": 0.6730769276618958,
+   "field": 0.5659340620040894,
+   "field_said_healthy": 0.016483517363667488,
+   "seconds": 42.768999099731445
+  },
+  "finetune|1|2": {
+   "lab": 0.7243589758872986,
+   "field": 0.5549450516700745,
+   "field_said_healthy": 0.09890110045671463,
+   "seconds": 42.277183055877686
+  },
+  "finetune|5|0": {
+   "lab": 0.9487179517745972,
+   "field": 0.5879120826721191,
+   "field_said_healthy": 0.09890110045671463,
+   "seconds": 55.405832052230835
+  },
+  "finetune|5|1": {
+   "lab": 0.9166666865348816,
+   "field": 0.5604395866394043,
+   "field_said_healthy": 0.005494505632668734,
+   "seconds": 56.91021990776062
+  },
+  "finetune|5|2": {
+   "lab": 0.9615384340286255,
+   "field": 0.5769230723381042,
+   "field_said_healthy": 0.10439560562372208,
+   "seconds": 53.81066656112671
+  },
+  "finetune|25|0": {
+   "lab": 0.9679487347602844,
+   "field": 0.5384615659713745,
+   "field_said_healthy": 0.049450550228357315,
+   "seconds": 53.55973291397095
+  },
+  "scratch|1|0": {
+   "lab": 0.6666666865348816,
+   "field": 0.5604395866394043,
+   "field_said_healthy": 0.2857142984867096,
+   "seconds": 115.47970843315125
+  },
+  "scratch|1|1": {
+   "lab": 0.5641025900840759,
+   "field": 0.5659340620040894,
+   "field_said_healthy": 0.18681319057941437,
+   "seconds": 144.07583045959473
+  },
+  "scratch|1|2": {
+   "lab": 0.6538461446762085,
+   "field": 0.5054945349693298,
+   "field_said_healthy": 0.5549450516700745,
+   "seconds": 117.72892332077026
+  },
+  "scratch|5|0": {
+   "lab": 0.807692289352417,
+   "field": 0.5439560413360596,
+   "field_said_healthy": 0.3186813294887543,
+   "seconds": 158.81212973594666
+  },
+  "scratch|5|1": {
+   "lab": 0.8333333134651184,
+   "field": 0.5494505763053894,
+   "field_said_healthy": 0.5164835453033447,
+   "seconds": 148.508868932724
+  },
+  "scratch|5|2": {
+   "lab": 0.8910256624221802,
+   "field": 0.5219780206680298,
+   "field_said_healthy": 0.13736264407634735,
+   "seconds": 145.99211597442627
+  },
+  "scratch|25|0": {
+   "lab": 0.8782051205635071,
+   "field": 0.5274725556373596,
+   "field_said_healthy": 0.29120880365371704,
+   "seconds": 151.28103971481323
+  }
+ },
+ "field_runs": {
+  "frozen+field": {
+   "lab": 0.9487179517745972,
+   "field": 0.5494505763053894,
+   "field_said_healthy": 0.010989011265337467,
+   "seconds": 0.17042136192321777
+  },
+  "finetune+field": {
+   "lab": 0.9935897588729858,
+   "field": 0.5604395866394043,
+   "field_said_healthy": 0.0,
+   "seconds": 62.233803272247314
+  }
+ },
+ "backbones": {
+  "ResNet-18": {
+   "params": 11689512,
+   "macs": {
+    "1x1 conv": 19267584,
+    "depthwise conv": 0,
+    "regular conv (3x3 and larger)": 1794293760,
+    "fully connected": 512000
+   },
+   "imagenet_top1": 69.758,
+   "ms_per_photo": 24.901175498962402,
+   "feature_seconds": 66.02947282791138,
+   "lab_5leaves": 0.9551282127698263,
+   "field_5leaves": 0.6263736287752787
+  },
+  "ResNet-50": {
+   "params": 25557032,
+   "macs": {
+    "1x1 conv": 2119434240,
+    "depthwise conv": 0,
+    "regular conv (3x3 and larger)": 1967702016,
+    "fully connected": 2048000
+   },
+   "imagenet_top1": 80.858,
+   "ms_per_photo": 63.24237585067749,
+   "feature_seconds": 223.5122299194336,
+   "lab_5leaves": 0.8183760841687521,
+   "field_5leaves": 0.5366300344467163
+  },
+  "MobileNetV3-L": {
+   "params": 5483032,
+   "macs": {
+    "1x1 conv": 190269312,
+    "depthwise conv": 18392640,
+    "regular conv (3x3 and larger)": 5419008,
+    "fully connected": 2508800
+   },
+   "imagenet_top1": 75.274,
+   "ms_per_photo": 13.969838619232178,
+   "feature_seconds": 42.807348012924194,
+   "lab_5leaves": 0.9252136548360189,
+   "field_5leaves": 0.5366300543149313
+  },
+  "EfficientNet-B0": {
+   "params": 5288548,
+   "macs": {
+    "1x1 conv": 339164672,
+    "depthwise conv": 34532064,
+    "regular conv (3x3 and larger)": 10838016,
+    "fully connected": 1280000
+   },
+   "imagenet_top1": 77.692,
+   "ms_per_photo": 17.45072603225708,
+   "feature_seconds": 85.58704018592834,
+   "lab_5leaves": 0.9615384538968405,
+   "field_5leaves": 0.5586080749829611
+  }
+ },
+ "field_only": {
+  "frozen_cv": 0.5752525349458059,
+  "finetune_split0": 0.6666666865348816,
+  "finetune_split1": 0.5196078419685364
+ },
+ "field_confusion_frozen": {
+  "early blight": {
+   "healthy": 8,
+   "early blight": 55,
+   "late blight": 54
+  },
+  "late blight": {
+   "healthy": 12,
+   "early blight": 41,
+   "late blight": 52
+  }
+ }
+}

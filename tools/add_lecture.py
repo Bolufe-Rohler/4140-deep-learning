@@ -25,6 +25,7 @@ import argparse
 import fnmatch
 import hashlib
 import pathlib
+import re
 import shutil
 import sys
 import tempfile
@@ -130,10 +131,29 @@ def sha256(path):
     return h.hexdigest()
 
 
+DAY = r"(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)"
+
+
+def normalize_title(nb, lec):
+    """Title line: lecture number from course.json, no class date (dates move, numbers don't)."""
+    n = int(lec["id"][1:])
+    for c in nb.cells:
+        if c.cell_type != "markdown":
+            continue
+        first, _, rest = c.source.partition("\n")
+        new = re.sub(r"Lecture\s+\d+\s*\(" + DAY + r"[^)]*\)", f"Lecture {n}", first)
+        new = re.sub(r"·\s*" + DAY + r"\s+[A-Z][a-z]{2}\s+\d{1,2}(?:,\s*\d{4})?\s*·", f"· Lecture {n} ·", new)
+        if new != first:
+            print(f"   title: {first.strip()}  ->  {new.strip()}")
+            c.source = new + ("\n" + rest if rest or c.source.endswith("\n") else "")
+        return
+
+
 def add_cells(nb_path, m, lec):
     nb = nbformat.read(nb_path, as_version=4)
     nb.cells = [c for c in nb.cells
                 if not set(c.get("metadata", {}).get("tags", [])) & {course.SETUP_TAG, course.BANNER_TAG}]
+    normalize_title(nb, lec)
     banner = nbformat.v4.new_markdown_cell(course.banner_source(m, lec, nb_path.name),
                                            metadata={"tags": [course.BANNER_TAG]})
     setup = nbformat.v4.new_code_cell(course.setup_cell_source(m, lec),

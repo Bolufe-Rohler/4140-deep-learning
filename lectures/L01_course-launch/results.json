@@ -1,0 +1,12 @@
+{
+ "pca_2_numbers_linear": 0.4464,
+ "raw_784_linear": 0.9255,
+ "learned_2_numbers_linear": 0.9641,
+ "parameters": 533792,
+ "snapshot_accuracy": {
+  "0": 0.1003,
+  "50": 0.4272,
+  "469": 0.9119,
+  "4690": 0.9641
+ }
+}

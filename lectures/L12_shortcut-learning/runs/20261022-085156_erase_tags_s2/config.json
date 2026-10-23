@@ -1,0 +1,19 @@
+{
+  "name": "erase_tags",
+  "purpose": "baseline and fix: tag spots blanked",
+  "seed": 2,
+  "epochs": 8,
+  "batch": 64,
+  "lr": 0.001,
+  "optimizer": "Adam",
+  "n_train": 20000,
+  "n_val": 5000,
+  "preprocessing": "erase_tag_area",
+  "code_version": "L13-shortcuts-v1",
+  "commit": "not under git (demo)",
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cpu",
+    "device": "cpu"
+  }
+}
